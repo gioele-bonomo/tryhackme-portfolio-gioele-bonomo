@@ -1,0 +1,5 @@
+Per valutare la sicurezza di un sistema, è necessario pensare in termini di triade della sicurezza: riservatezza, integrità e disponibilità (CIA).
+
+Confidentiality: Riservatezza: garantisce che solo le persone o i destinatari previsti possano accedere ai dati.
+Integrity: L'integrità ha lo scopo di garantire che i dati non possano essere alterati; inoltre, siamo in grado di rilevare qualsiasi alterazione, se si verifica.
+Availability: disponibilità: ha lo scopo di garantire che il sistema o il servizio sia disponibile quando necessario.
