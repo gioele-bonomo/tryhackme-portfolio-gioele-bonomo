@@ -1,0 +1,148 @@
+# Difensive Security Intro - TryHackMe
+
+Sicurezza difensiva:
+  Prevenire il verificarsi di intrusioni
+  Rilevare le intrusioni quando si verificano e rispondere correttamente
+Ne fanno parte i team blu
+
+Compiti che includono: 
+- Formazione agli utenti sulla sicurezza informatica, aiutandoli a proteggerli dagli attacchi ai loro sistemi
+- Conoscenza dei sistemi e dispositivi che dobbiamo gestire e proteggere
+- Patching continuo dei dispositivi all'interno di una rete -> gli aggiornamenti portano a correzioni continue per vulnerabilità precedenti.
+- Applicazione di dispositivi di sicurezza preventiva: firewall (controllano il traffico di rete che entra ed esce dalla rete), gli IPS (sistemi di prevenzione delle intrusioni, bloccano qualsiasi traffico di rete che soddisfi le regole e le firme di attacco correnti).
+- Registrazione e monitoraggio della rete : importante fare ciò per rilevare attività dannose e intrusioni. Se un nuovo dispositivo compare sulla nostra rete, dovremmo essere in grado di rilevarlo.
+
+Centro operativo di sicurezza ( SOC ), Threat Intelligence:
+ SOC sta per Security Operations Center: team che monitora la rete e i suoi sistemi per rilevare eventi dannosi. Le aree principali in cui lavorano sono:
+
+ - Vulnerabilità: quando si trova, bisogna risolverla installando l'ultima patch. Se non disponibile, bisogna adottare le misure necessarie.
+
+ - Violazioni delle policy: la policy è un insieme di regole necessarie per proteggere la rete e i sistemi.
+
+ - Attività non autorizzata: utente e psw rubati -> hacker che le utilizza per entrare nella rete-> il SOC deve rilevare e bloccare ciò il prima possibile, prima che si verifichino altri danni.
+
+ - Intrusione di rete: La possibilità di intrusione è sempre presente. Può verificarsi quando anche un utente clicca su un link dannoso.
+
+
+
+Intelligence sulle minacce:
+
+Informazioni raccolte su nemici reali e potenziali.
+Minaccia: qualsiasi azione che possa interrompere o influire negativamente su un sistema.
+
+Essa raccoglie informazioni per aiutare l'azienda a prepararsi meglio contro potenziali avversari. 
+Obiettivo? ottenere una difesa basata sulle minacce.
+
+Intelligence ha bisogno di dati, essi devono essere raccolti, elaborati e analizzati: log di rete ad esempio.
+
+Analisi forense digitale e risposta agli incidenti ( DFIR ):
+
+Informatica forense:
+indagare sui crimini e accertare i fatti.
+L'attenzione è sull'analisi delle prove di un attacco e dei suoi autori, nonché su altri ambiti come il furto di proprietà intellettuale, lo spionaggio informatico e il possesso di contenuti non autorizzati:
+
+- File System: 
+- Memoria di sistema: acquisizione di immagine forense: copia di basso livello della memoria di sistema.
+- Registri di sistema: file di registro che rimangono nei pc
+- Registri di rete: pacchetti di rete
+
+Risposta agli incidenti:
+
+Preparazione: questo richiede un team formato e pronto a gestire gli incidenti. Idealmente, vengono messe in atto diverse misure per prevenire gli incidenti fin dall'inizio.
+
+Rilevamento e analisi: il team dispone delle risorse necessarie per rilevare qualsiasi incidente; inoltre, è essenziale analizzare ulteriormente qualsiasi incidente rilevato per conoscerne la gravità.
+
+Contenimento, eradicazione e ripristino: una volta rilevato un incidente, è fondamentale impedirne l'impatto su altri sistemi, eliminarlo e ripristinare i sistemi interessati. Ad esempio, quando ci accorgiamo che un sistema è infetto da un virus informatico, desideriamo impedire (contenere) la diffusione del virus ad altri sistemi, pulire (eradicare) il virus e garantire un corretto ripristino del sistema.
+
+Attività post-incidente: dopo un ripristino riuscito, viene redatto un rapporto e la lezione appresa viene condivisa per prevenire incidenti simili in futuro.
+Analisi del malware
+
+
+Analisi del malware: 
+
+Difensive Security
+
+Esempio sicurezza difensiva soc:
+-Utilizziamo un SIEM, uno strumento di Security Information and Event Management che raccoglie informazioni ed eventi relativi alla sicurezza da diverse fonti e li presenta in un'unica dashboard -> qualcosa di sospettoso? Viene rilevato dal SIEM.
+Non tutti gli avvisi sono dannosi, spetta all'analista utilizzare la propria competenza e capire cosa è pericoloso e cosa no.
+esempio: utente che fallisce tentativi di accesso
+
+Simulazione di un SIEM:
+Siamo ne pannello di un SIEM:
+Dobbiamo trovare l'accesso non autorizzato: 143.110.250.149 porta 22
+AbuseIPDB, and Cisco Talos Intelligence
+Abbiamo visto che l'ip è davvero un accesso non autorizzato, mediante i programmi precedentemente utilizzati.
+Nel Firewall, cerchiamo e blocchiamo l'ip del malintenzionato.
+THM{THREAT-BLOCKED}
+
+Carreers IT
+Analyst IT: esplorano e valutano le reti aziendali per estrarre dati fruibili e fornire raccomandazioni utili agli ingegneri per lo sviluppo di misure preventive
+Percorsi di apprendimento: Pre-sicurezza, Sicurezza informatica 101, SOC Livello 1,
+	
+Diventare un analista della sicurezza informatica
+	Come diventare un analista SOC di livello 1
+	Un giorno nella vita di un analista SOC
+	La guida definitiva al colloquio per analista SOC L1
+	Da studente ad analista SOC : la storia di successo di Hayden
+
+Security Engineer: sviluppano e implementano soluzioni di sicurezza utilizzando dati su minacce e vulnerabilità
+Operano per eludere una vasta gamma di attacchi, inclusi attacchi alle applicazioni web, minacce di rete e tendenze e tattiche in continua evoluzione. L'obiettivo finale è mantenere e adottare misure di sicurezza per mitigare il rischio di attacchi e perdita di dati.
+
+Responsabilità: Test e screening delle misure di sicurezza nel software
+Monitorare reti e report per aggiornare i sistemi e mitigare le vulnerabilità
+Identificare e implementare i sistemi necessari per una sicurezza ottimale
+
+Percorsi di apprendimento:
+SOC Livello 1
+Tester di penetrazione JR
+Pentesting offensivo
+
+Diventare un ingegnere della sicurezza
+Come diventare un ingegnere della sicurezza
+Un giorno nella vita di un ingegnere della sicurezza
+Preparazione per un colloquio di ingegneria della sicurezza
+Diventare un ingegnere della sicurezza: la storia di successo di Richard
+
+Incident responder: rispondono in modo produttivo ed efficiente alle violazioni della sicurezza. creazione di piani, policy e protocolli che le organizzazioni devono attuare durante e dopo gli incidenti. 
+ottenere una risposta rapida ed efficace, preservare la solidità finanziaria ed evitare implicazioni negative in caso di violazione. In definitiva, gli addetti alla risposta agli incidenti proteggono i dati, la reputazione e la solidità finanziaria dell'azienda dagli attacchi informatici.
+
+Percorsi di apprendimento:
+SOC Livello 1
+
+Digital Forensics Examiner: detective, analizzare incidenti.
+Raccogli prove digitali osservando le procedure legali
+Analizzare le prove digitali per trovare risposte relative al caso
+Documenta i tuoi risultati e rendiconta il caso
+
+Malware Analyst: analizzare programmi sospetti, scoprirne le funzioni e redigere report sulle proprie scoperte.
+reverse engineer, convertire i programmi compilati dal linguaggio macchina a codice leggibile, solitamente in un linguaggio di basso livello, inguaggio assembly e il linguaggio C. comprendere tutte le attività svolte da un programma dannoso, scoprire come rilevarlo e segnalarlo.
+Eseguire un'analisi statica dei programmi dannosi, che comporta il reverse engineering
+Eseguire un'analisi dinamica dei campioni di malware osservandone le attività in un ambiente controllato
+Documentare e segnalare tutti i risultati
+
+Penetration Tester: hacker etico: testare la sicurezza dei sistemi e dei software aziendali, cercando di individuare difetti e vulnerabilità attraverso un hacking sistematizzato, sfruttano queste vulnerabilità per valutare il rischio in ogni singolo caso, così da prevenire un attacco informatico reale. cercano di scoprire numerose vulnerabilità nei sistemi 
+
+Eseguire test su sistemi informatici, reti e applicazioni basate sul Web
+Eseguire valutazioni di sicurezza, audit e analizzare le policy
+Valutare e segnalare le informazioni, consigliando azioni per la prevenzione degli attacchi
+
+Percorso di apprendimento:
+Tester di penetrazione JR - jr penetration tester
+Pentesting offensivo - offensive pentesting
+
+Diventare un Penetration Tester
+Come diventare un Penetration Tester
+Preparazione per un colloquio da Junior Penetration Tester
+Dal supporto IT al pentester: la storia di successo di Tom
+
+Red Teamer: simili ai pentester ma più mirati: testano le capacità di rilevamento e risposta dell'azienda. azioni dei criminali informatici, emulare attacchi dannosi, mantenere l'accesso ed evitare di essere scoperti
+
+Emulare il ruolo di un attore della minaccia per scoprire vulnerabilità sfruttabili, mantenere l'accesso ed evitare il rilevamento
+Valutare i controlli di sicurezza delle organizzazioni, l'intelligence sulle minacce e le procedure di risposta agli incidenti
+Valutare e rendicontare informazioni approfondite, con dati fruibili per consentire alle aziende di evitare casi del mondo reale
+
+Tester di penetrazione JR
+Pentesting offensivo
+Red Teamer
+
+Red Teaming: ruoli lavorativi, stipendi e opportunità
