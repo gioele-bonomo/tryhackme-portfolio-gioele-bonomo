@@ -1,0 +1,100 @@
+Principi di sicurezza
+
+Innanzitutto conoscere il nostro avversario è fondamentale per poter conoscere i suoi attacchi e iniziare a implementare controlli di sicurezza appropriati. 
+Vogliamo impedire a un bambino di accedere al nostro computer portatile? 
+Stiamo cercando di proteggere un computer portatile che contiene progetti tecnici del valore di milioni di dollari? 
+è impossibile raggiungere una sicurezza perfetta per tutti.
+
+Per valutare la sicurezza di un sistema, è necessario pensare in termini di triade della sicurezza: riservatezza, integrità e disponibilità (CIA).
+
+Confidentiality: Riservatezza: garantisce che solo le persone o i destinatari previsti possano accedere ai dati.
+Integrity: L'integrità ha lo scopo di garantire che i dati non possano essere alterati; inoltre, siamo in grado di rilevare qualsiasi alterazione, se si verifica.
+Availability: disponibilità ha lo scopo di garantire che il sistema o il servizio sia disponibile quando necessario.
+
+Autenticità : autentico significa non fraudolento o contraffatto. L'autenticità consiste nel garantire che il documento/file/dato provenga dalla fonte dichiarata.
+Utilità : l'utilità si concentra sull'utilità delle informazioni. Ad esempio, un utente potrebbe aver perso la chiave di decrittazione per accedere a un laptop con un archivio crittografato. Sebbene l'utente abbia ancora il laptop con i suoi dischi intatti, non può accedervi. In altre parole, sebbene ancora disponibili, le informazioni sono in una forma non utile, ovvero priva di utilità.
+Possesso : questo elemento di sicurezza richiede che proteggiamo le informazioni da furti, copie o controlli non autorizzati. Ad esempio, un aggressore potrebbe rubare un'unità di backup, il che significa che perdiamo il possesso delle informazioni finché ne è in possesso. In alternativa, l'aggressore potrebbe riuscire a crittografare i nostri dati utilizzando un ransomware; anche in questo caso, la perdita del possesso dei dati.
+
+Parkeriano Esagono
+Nel 1998, Donn Parker propose l'Esagono Parkeriano, un insieme di sei elementi di sicurezza. Essi sono:
+
+Disponibilità
+Utilità
+Integrità
+Autenticità
+Riservatezza
+Possesso
+
+
+DAD:
+La sicurezza di un sistema viene attaccata attraverso diversi mezzi. 
+Può trattarsi della divulgazione di dati segreti, dell'alterazione o della distruzione di dati.
+
+Disclosure : La divulgazione è l'opposto della riservatezza. In altre parole, la divulgazione di dati riservati costituirebbe un attacco alla riservatezza.
+Alteration: L'alterazione è l'opposto dell'integrità. Ad esempio, l'integrità di un assegno è indispensabile.
+Destruction/Denial: Distruzione/Negazione è l'opposto di Disponibilità.
+
+DAD opposto di CIA
+
+Modelli di sicurezza
+come possiamo creare un sistema che garantisca una o più funzioni di sicurezza? La risposta risiede nell'utilizzo di modelli di sicurezza
+
+Modello Bell-LaPadula: raggiungere la riservatezza:
+
+	1)Proprietà di sicurezza semplice: un soggetto con un livello di sicurezza inferiore non può leggere un oggetto con un livello di sicurezza superiore. (no read up)
+  2)Proprietà di sicurezza Star: un soggetto con un livello di sicurezza più elevato non può scrivere su un oggetto con un livello di sicurezza inferiore (no write down):  impedisce la divulgazione di informazioni sensibili a un soggetto con un livello di sicurezza inferiore
+  3)Proprietà di sicurezza discrezionale:  matrice di accesso per consentire operazioni di lettura e scrittura:
+
+Soggetti	Oggetto A		Oggetto B
+Soggetto 1	Scrivere		Nessun accesso
+Soggetto 2	Lettura/scrittura	Leggere
+
+È possibile condividere informazioni riservate con persone con un'autorizzazione di sicurezza più elevata (scrivere in alto) e ricevere informazioni riservate
+da persone con un'autorizzazione di sicurezza inferiore (leggere in basso).
+Non è stato progettato per gestire la condivisione di file.
+
+
+Il modello di integrità di Biba: raggiungere l'integrità
+
+	1)Proprietà di integrità semplice : questa proprietà è definita "no read down"; un soggetto con integrità più elevata non dovrebbe leggere da un oggetto
+    con integrità più bassa.
+  2)Proprietà di integrità della stella : questa proprietà è definita "nessuna scrittura"; un soggetto con integrità inferiore non dovrebbe scrivere su un oggetto
+    con integrità superiore.
+
+Leggi, scrivi". Questa regola è in contrasto con il modello Bell-LaPadula, e ciò non dovrebbe sorprendere, poiché il primo si concentra sulla riservatezza, mentre il secondo sull'integrità.
+non gestisce le minacce interne (minacce interne).
+
+
+Il modello Clark-Wilson: mira a raggiungere l'integrità:
+
+	1)Elemento dati vincolato (CDI) : si riferisce al tipo di dati di cui vogliamo preservare l'integrità.
+	2)Elemento dati non vincolato (UDI) : si riferisce a tutti i tipi di dati oltre a CDI, come input utente e di sistema.
+	3)Procedure di trasformazione (TP) : queste procedure sono operazioni programmate, come lettura e scrittura, e dovrebbero mantenere l'integrità dei CDI.
+	4)Procedure di verifica dell'integrità (IVP) : queste procedure controllano e garantiscono la validità dei CDI.
+
+
+Defence in depth: sicurezza multilivello: creazione di un sistema di sicurezza a più livelli
+cassetto chiuso a chiave: sicurezza a più livelli: cassetto chiuso a chiave, la stanza interessata chiusa a chiave, la porta principale dell'appartamento chiusa a chiave, il cancello del palazzo chiuso a chiave e potreste anche voler aggiungere qualche telecamera di sicurezza
+
+
+Zero Trust vs Trust ma Verifica
+
+-Fidati ma verifica: dovremmo sempre verificare anche quando ci fidiamo di un'entità e del suo comportamento.
+	La verifica di solito richiede l'impostazione di meccanismi di log adeguati; la verifica indica l'analisi dei log per assicurarsi che tutto sia normale.
+	non è possibile verificare tutto; basti pensare al lavoro necessario per esaminare tutte le azioni intraprese da una singola entità, come le pagine Internet visitate da un singolo utente. Ciò richiede meccanismi di sicurezza automatizzati, come proxy , rilevamento delle intrusioni e sistemi di prevenzione delle intrusioni.
+
+-Fiducia Zero: fiducia come una vulnerabilità, si rivolge alle minacce interne-> zero trust cerca di eliminarla: Non fidarti mai, verifica sempre!
+	 ogni entità vista come avversaria.
+	 Zero Trust non concede fiducia a un dispositivo in base alla sua posizione o proprietà.
+	 Autenticazione e autorizzazione sono necessarie prima di accedere a qualsiasi risorsa : MICROSEGMENTAZIONE -> progettazione in cui un segmento di rete può avere dimensioni pari a quelle di un singolo host (comunicazione tra gli host richiede autenticazione, liste di controllo degli accessi e altri requisiti di sicurezza).
+
+
+Threat vs Risk:
+
+Vulnerability: Vulnerabilità : vulnerabile significa suscettibile ad attacchi o danni. Nella sicurezza informatica, una vulnerabilità è una debolezza.
+Threat: Minaccia : una minaccia è un potenziale pericolo associato a questa debolezza o vulnerabilità.
+Risk: Rischio : il rischio riguarda la probabilità che un agente della minaccia sfrutti una vulnerabilità e il conseguente impatto sull'azienda.
+
+showroom con porte e finestre in vetro standard presenta una debolezza, o vulnerabilità (vetro)-> rischio che porte e finestre in vetro possano essere rotte -> I proprietari dello showroom dovrebbero valutare attentamente il rischio , ovvero la probabilità che una porta o una finestra in vetro si rompa e il conseguente impatto sull'attività.
+
+Lavori per un ospedale che utilizza un particolare sistema di database per archiviare tutte le cartelle cliniche. Un giorno, seguendo le ultime notizie sulla sicurezza, scopri che il sistema di database utilizzato non solo è vulnerabile, ma che è stato rilasciato anche un codice exploit funzionante proof-of-concept; il codice exploit rilasciato indica che la minaccia è reale. Con questa consapevolezza, devi valutare il rischio risultante e decidere i passi successivi.
