@@ -36,43 +36,6 @@ Destruction/Denial: Distruzione/Negazione è l'opposto di Disponibilità.
 
 DAD opposto di CIA
 
-Modelli di sicurezza
-come possiamo creare un sistema che garantisca una o più funzioni di sicurezza? La risposta risiede nell'utilizzo di modelli di sicurezza
-
-Modello Bell-LaPadula: raggiungere la riservatezza:
-
-	1)Proprietà di sicurezza semplice: un soggetto con un livello di sicurezza inferiore non può leggere un oggetto con un livello di sicurezza superiore. (no read up)
-  2)Proprietà di sicurezza Star: un soggetto con un livello di sicurezza più elevato non può scrivere su un oggetto con un livello di sicurezza inferiore (no write down):  impedisce la divulgazione di informazioni sensibili a un soggetto con un livello di sicurezza inferiore
-  3)Proprietà di sicurezza discrezionale:  matrice di accesso per consentire operazioni di lettura e scrittura:
-
-Soggetti	Oggetto A		Oggetto B
-Soggetto 1	Scrivere		Nessun accesso
-Soggetto 2	Lettura/scrittura	Leggere
-
-È possibile condividere informazioni riservate con persone con un'autorizzazione di sicurezza più elevata (scrivere in alto) e ricevere informazioni riservate
-da persone con un'autorizzazione di sicurezza inferiore (leggere in basso).
-Non è stato progettato per gestire la condivisione di file.
-
-
-Il modello di integrità di Biba: raggiungere l'integrità
-
-	1)Proprietà di integrità semplice : questa proprietà è definita "no read down"; un soggetto con integrità più elevata non dovrebbe leggere da un oggetto
-    con integrità più bassa.
-  2)Proprietà di integrità della stella : questa proprietà è definita "nessuna scrittura"; un soggetto con integrità inferiore non dovrebbe scrivere su un oggetto
-    con integrità superiore.
-
-Leggi, scrivi". Questa regola è in contrasto con il modello Bell-LaPadula, e ciò non dovrebbe sorprendere, poiché il primo si concentra sulla riservatezza, mentre il secondo sull'integrità.
-non gestisce le minacce interne (minacce interne).
-
-
-Il modello Clark-Wilson: mira a raggiungere l'integrità:
-
-	1)Elemento dati vincolato (CDI) : si riferisce al tipo di dati di cui vogliamo preservare l'integrità.
-	2)Elemento dati non vincolato (UDI) : si riferisce a tutti i tipi di dati oltre a CDI, come input utente e di sistema.
-	3)Procedure di trasformazione (TP) : queste procedure sono operazioni programmate, come lettura e scrittura, e dovrebbero mantenere l'integrità dei CDI.
-	4)Procedure di verifica dell'integrità (IVP) : queste procedure controllano e garantiscono la validità dei CDI.
-
-
 Defence in depth: sicurezza multilivello: creazione di un sistema di sicurezza a più livelli
 cassetto chiuso a chiave: sicurezza a più livelli: cassetto chiuso a chiave, la stanza interessata chiusa a chiave, la porta principale dell'appartamento chiusa a chiave, il cancello del palazzo chiuso a chiave e potreste anche voler aggiungere qualche telecamera di sicurezza
 
