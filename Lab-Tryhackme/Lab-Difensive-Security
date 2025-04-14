@@ -1,0 +1,12 @@
+SIEM, è uno strumento di Security Information and Event Management che raccoglie informazioni ed eventi relativi alla sicurezza da diverse fonti,
+presentandoli in un'unica dashboard -> qualcosa di sospettoso? Viene rilevato dal SIEM.
+Non tutti gli avvisi sono dannosi, spetta all'analista utilizzare la propria competenza e capire cosa è pericoloso e cosa no.
+esempio: utente che fallisce tentativi di accesso
+
+SIMULAZIONE SIEM:
+
+Siamo ne pannello di un SIEM:
+  Dobbiamo trovare l'accesso non autorizzato: 143.110.250.149 porta 22
+  Utilizziamo AbuseIPDB, and Cisco Talos Intelligence
+  Abbiamo visto che l'ip è davvero un accesso non autorizzato, mediante i programmi precedentemente utilizzati.
+  Nel Firewall, cerchiamo e blocchiamo l'ip del malintenzionato.
