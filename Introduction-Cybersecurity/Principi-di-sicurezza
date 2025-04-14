@@ -5,27 +5,25 @@ Vogliamo impedire a un bambino di accedere al nostro computer portatile?
 Stiamo cercando di proteggere un computer portatile che contiene progetti tecnici del valore di milioni di dollari? 
 è impossibile raggiungere una sicurezza perfetta per tutti.
 
-
-
-
-
-
-
-
 Defence in depth: sicurezza multilivello: creazione di un sistema di sicurezza a più livelli
-cassetto chiuso a chiave: sicurezza a più livelli: cassetto chiuso a chiave, la stanza interessata chiusa a chiave, la porta principale dell'appartamento chiusa a chiave, il cancello del palazzo chiuso a chiave e potreste anche voler aggiungere qualche telecamera di sicurezza
+		cassetto chiuso a chiave: sicurezza a più livelli: cassetto chiuso a chiave, la stanza interessata chiusa a chiave, la porta principale 
+		dell'appartamento chiusa a chiave, il cancello del palazzo chiuso a chiave e potreste anche voler aggiungere qualche telecamera di sicurezza
 
 
-Zero Trust vs Trust ma Verifica
+Zero Trust vs Trust but verify:
 
--Fidati ma verifica: dovremmo sempre verificare anche quando ci fidiamo di un'entità e del suo comportamento.
+-Trust but verify: dovremmo sempre verificare anche quando ci fidiamo di un'entità e del suo comportamento.
 	La verifica di solito richiede l'impostazione di meccanismi di log adeguati; la verifica indica l'analisi dei log per assicurarsi che tutto sia normale.
-	non è possibile verificare tutto; basti pensare al lavoro necessario per esaminare tutte le azioni intraprese da una singola entità, come le pagine Internet visitate da un singolo utente. Ciò richiede meccanismi di sicurezza automatizzati, come proxy , rilevamento delle intrusioni e sistemi di prevenzione delle intrusioni.
+	non è possibile verificare tutto; basti pensare al lavoro necessario per esaminare tutte le azioni intraprese da una singola entità,
+	come le pagine Internet visitate da un singolo utente. Ciò richiede meccanismi di sicurezza automatizzati, come proxy , rilevamento delle intrusioni
+	e sistemi di prevenzione delle intrusioni.
 
--Fiducia Zero: fiducia come una vulnerabilità, si rivolge alle minacce interne-> zero trust cerca di eliminarla: Non fidarti mai, verifica sempre!
+-Zero Trust: fiducia come una vulnerabilità, si rivolge alle minacce interne-> zero trust cerca di eliminarla: Non fidarti mai, verifica sempre!
 	 ogni entità vista come avversaria.
 	 Zero Trust non concede fiducia a un dispositivo in base alla sua posizione o proprietà.
-	 Autenticazione e autorizzazione sono necessarie prima di accedere a qualsiasi risorsa : MICROSEGMENTAZIONE -> progettazione in cui un segmento di rete può avere dimensioni pari a quelle di un singolo host (comunicazione tra gli host richiede autenticazione, liste di controllo degli accessi e altri requisiti di sicurezza).
+	 Autenticazione e autorizzazione sono necessarie prima di accedere a qualsiasi risorsa : MICROSEGMENTAZIONE -> progettazione in cui un segmento di rete 
+	 può avere dimensioni pari a quelle di un singolo host (comunicazione tra gli host richiede autenticazione, liste di controllo degli accessi e
+	 altri requisiti di sicurezza).
 
 
 Threat vs Risk:
@@ -34,6 +32,11 @@ Vulnerability: Vulnerabilità : vulnerabile significa suscettibile ad attacchi o
 Threat: Minaccia : una minaccia è un potenziale pericolo associato a questa debolezza o vulnerabilità.
 Risk: Rischio : il rischio riguarda la probabilità che un agente della minaccia sfrutti una vulnerabilità e il conseguente impatto sull'azienda.
 
-showroom con porte e finestre in vetro standard presenta una debolezza, o vulnerabilità (vetro)-> rischio che porte e finestre in vetro possano essere rotte -> I proprietari dello showroom dovrebbero valutare attentamente il rischio , ovvero la probabilità che una porta o una finestra in vetro si rompa e il conseguente impatto sull'attività.
+Esempio: showroom con porte e finestre in vetro standard presenta una debolezza, o vulnerabilità (vetro)-> rischio che porte e finestre in vetro possano 
+	 essere rotte -> I proprietari dello showroom dovrebbero valutare attentamente il rischio , ovvero la probabilità che una porta o una finestra in vetro 
+	 si rompa e il conseguente impatto sull'attività.
 
-Lavori per un ospedale che utilizza un particolare sistema di database per archiviare tutte le cartelle cliniche. Un giorno, seguendo le ultime notizie sulla sicurezza, scopri che il sistema di database utilizzato non solo è vulnerabile, ma che è stato rilasciato anche un codice exploit funzionante proof-of-concept; il codice exploit rilasciato indica che la minaccia è reale. Con questa consapevolezza, devi valutare il rischio risultante e decidere i passi successivi.
+Esempio 2: Lavori per un ospedale che utilizza un particolare sistema di database per archiviare tutte le cartelle cliniche. Un giorno, seguendo le ultime notizie
+	   sulla sicurezza, scopri che il sistema di database utilizzato non solo è vulnerabile, ma che è stato rilasciato anche un codice exploit funzionante 
+	   proof-of-concept; il codice exploit rilasciato indica che la minaccia è reale. 
+	   Con questa consapevolezza, devi valutare il rischio risultante e decidere i passi successivi.
