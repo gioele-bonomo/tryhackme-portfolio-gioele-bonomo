@@ -9,6 +9,9 @@ Riservatezza
 Possesso
 
 dove:
+Confidentiality: Riservatezza: garantisce che solo le persone o i destinatari previsti possano accedere ai dati.
+Integrity: L'integrità ha lo scopo di garantire che i dati non possano essere alterati; inoltre, siamo in grado di rilevare qualsiasi alterazione, se si verifica.
+Availability: disponibilità: ha lo scopo di garantire che il sistema o il servizio sia disponibile quando necessario.
 Autenticità : autentico significa non fraudolento o contraffatto. L'autenticità consiste nel garantire che il documento/file/dato provenga dalla fonte dichiarata.
 Utilità : l'utilità si concentra sull'utilità delle informazioni. Ad esempio, un utente potrebbe aver perso la chiave di decrittazione per accedere a un laptop 
           con un archivio crittografato. 
