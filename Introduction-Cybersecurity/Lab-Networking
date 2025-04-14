@@ -1,0 +1,9 @@
+Simulazione accesso rete wifi pubblica di un hotel
+
+Per utilizzare il servizio di wifi dell'hotel, bisogna pagare.
+Abbiamo 2 host, uno che ha pagato (green) e un altro che non ha pagato (red).
+Il router consente l'invio dei pacchetti (traffico dati) all'host green, mentre viene negato all'altro host, l'invio dei pacchetti, perchè non ha pagato.
+
+Possiamo però modificare indirizzo MAC dell'host red con quello green, così da camuffarci come l'host green e utilizzare il wifi.
+
+Vedremo un'invio e ricezione dei pkt da entrambi gli host
