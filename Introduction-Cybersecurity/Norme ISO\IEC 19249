@@ -1,0 +1,55 @@
+Norme ISO/IEC 19249
+
+SO/IEC 19249:2017 Tecnologia dell'informazione - Tecniche di sicurezza - Catalogo dei principi di architettura e progettazione per prodotti, sistemi e applicazioni
+sicuri 
+Obiettivo-> fornire una panoramica più approfondita di ciò che le organizzazioni internazionali intendono insegnare in merito ai principi di sicurezza.
+
+
+5 principi architettonici:
+
+1)Separazione dei domini: ogni insieme di componenti (applicazioni, dati o altre risorse) correlati è raggruppato come un'unica entità. 
+  Ogni entità avrà il proprio dominio e le verrà assegnato un insieme comune di attributi di sicurezza
+	Esempio: livelli di privilegio kernel x86 -> eseguito nell'anello 0 (livello con privilegi più elevato)
+	applicazioni in modalità utente -> eseguite nel livello 3 (privilegi meno elevati)-> separazione inclusa nel modello di Goguen-Meseguer
+
+2)Stratificazione: quando un sistema è strutturato in molti livelli o layer astratti, diventa possibile imporre policy di sicurezza a diversi livelli
+	esempio: modello OSI con i 7 livelli di networking: ogni livello-> fornisce servizio specifico al livello superiore. Questa stratificazione impone policy di sicurezza e valida facilmente il corretto funzionamento del sistema.
+	operazioni su disco: un programmatore di solito utilizza le funzioni di lettura e scrittura su disco fornite dal linguaggio di programmazione di alto livello scelto. Il linguaggio di programmazione nasconde le chiamate di sistema di basso livello e le presenta come metodi più intuitivi. La stratificazione è correlata alla Difesa in Profondità.
+
+3)Incapsulamento: OOP, nascondiamo le implementazioni di basso livello e impediamo la manipolazione diretta dei dati in un oggetto 
+  fornendo metodi specifici a talescopo.
+	Esempio: se si dispone di un oggetto orologio, si fornirebbe un metodo increment()invece di consentire all'utente di accedere direttamente alla secondsvariabile.
+	Obiettivo: impedire valori non validi per e variabili.	
+	Contesto più grande: si utilizzerebbero interfacce di programmazione applicativa (API) appropriate che l'applicazione utilizzerebbe per accedere al db.
+
+4)Ridondanza: garantisce disponibilità e integrità.
+	  esempio: Si consideri il caso di un server hardware con due alimentatori integrati: se uno dei due si guasta, il sistema continua a funzionare. 
+	  Si consideri una configurazione RAID 5 con tre unità: se un'unità si guasta, i dati rimangono disponibili utilizzando le due unità rimanenti. 
+		Inoltre, se i dati vengono modificati in modo improprio su uno dei dischi, la modifica verrebbe rilevata tramite la parità, garantendo l'integrità dei dati.
+
+5)Virtualizzazione: condivisione di un singolo set di hardware tra più sistemi operativi. 
+  La virtualizzazione offre funzionalità di sandboxing che migliorano i limiti di sicurezza, la detonazione sicura e l'individuazione di programmi dannosi.
+		
+
+5 principi di progettazione:
+
+1)Privilegio minimo: in base alla necessità, in base alla necessità di sapere -> Chi può accedere a cosa?
+	Insegna che dovresti concedere il minimo numero di permessi a chiunque per svolgere il proprio compito, e nient'altro:
+	se un utente ha bisogno di poter visualizzare un documento, dovresti concedergli i diritti di lettura ma non quelli di scrittura.
+
+2)Minimizzazione della superficie di attacco: ogni sistema presenta vulnerabilità che un aggressore potrebbe sfruttare per comprometterlo.
+	Rischi che dovremmo minimizzare. Ad esempio, uno dei passaggi per rafforzare un sistema Linux , disabiliteremmo qualsiasi servizio non necessario.
+
+3)Validazione centralizzata dei parametri : molte minacce sono dovute al fatto che il sistema riceve input, soprattutto dagli utenti.
+	Input non validi -> utilizzabili per sfruttare vulnerabilità del sistema: come il diniego di servizio e l'esecuzione di codice da remoto.
+	Convalida dei parametri: passaggio necessario per garantire il corretto stato del sistema. dovrebbe essere centralizzata all'interno di una libreria o
+  di un sistema.
+
+4)Servizi di sicurezza generali centralizzati :  dovremmo puntare a centralizzare tutti i servizi di sicurezza (creare Server->centralizzato per l'autenticazione)
+
+5)Preparazione alla gestione di errori ed eccezioni: ogni volta che sviluppiamo un sistema, dovremmo tenere presente che errori ed eccezioni si verificano e
+  si verificheranno.
+	Esempio: applicazione di shopping: un cliente potrebbe tentare di effettuare un ordine per un articolo esaurito. Un database potrebbe sovraccaricarsi e 
+  smettere di rispondere a un'applicazione web. Questo principio insegna che i sistemi dovrebbero essere progettati per essere a prova di errore; 
+  ad esempio, se un firewall si blocca, dovrebbe bloccare tutto il traffico invece di consentirlo. Inoltre, dovremmo fare attenzione che i messaggi di errore 
+  non trasmettano informazioni che consideriamo riservate, come ad esempio il dump di contenuto di memoria contenente informazioni relative ad altri clienti.
