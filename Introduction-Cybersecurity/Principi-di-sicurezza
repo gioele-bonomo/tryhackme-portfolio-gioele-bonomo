@@ -7,19 +7,7 @@ Stiamo cercando di proteggere un computer portatile che contiene progetti tecnic
 
 
 
-Autenticità : autentico significa non fraudolento o contraffatto. L'autenticità consiste nel garantire che il documento/file/dato provenga dalla fonte dichiarata.
-Utilità : l'utilità si concentra sull'utilità delle informazioni. Ad esempio, un utente potrebbe aver perso la chiave di decrittazione per accedere a un laptop con un archivio crittografato. Sebbene l'utente abbia ancora il laptop con i suoi dischi intatti, non può accedervi. In altre parole, sebbene ancora disponibili, le informazioni sono in una forma non utile, ovvero priva di utilità.
-Possesso : questo elemento di sicurezza richiede che proteggiamo le informazioni da furti, copie o controlli non autorizzati. Ad esempio, un aggressore potrebbe rubare un'unità di backup, il che significa che perdiamo il possesso delle informazioni finché ne è in possesso. In alternativa, l'aggressore potrebbe riuscire a crittografare i nostri dati utilizzando un ransomware; anche in questo caso, la perdita del possesso dei dati.
 
-Parkeriano Esagono
-Nel 1998, Donn Parker propose l'Esagono Parkeriano, un insieme di sei elementi di sicurezza. Essi sono:
-
-Disponibilità
-Utilità
-Integrità
-Autenticità
-Riservatezza
-Possesso
 
 
 
